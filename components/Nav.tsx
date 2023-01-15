@@ -39,9 +39,9 @@ export default function Nav() {
           </div>
           <div className="mt-4 flex flex-row items-center justify-between lg:mt-1 xl:mt-4">
             <div className="text-md hidden space-x-6 font-semibold uppercase lg:flex xl:text-xl">
-              <Link href="/about">About us</Link>
-              <Link href="/services">Services</Link>
-              <Link href="/contact">Contact</Link>
+              <Link href="/#about">About us</Link>
+              <Link href="/#services">Services</Link>
+              <Link href="/#contact">Contact</Link>
             </div>
             <div className="flex items-center">
               <Facebook className="mr-4" />

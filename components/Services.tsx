@@ -1,47 +1,59 @@
-import { EyeTear, Refractor } from './icons'
+import {
+  EyeTear,
+  Refractor,
+  Medicine,
+  Clipboard,
+  ContactLensFitting,
+  Glasses,
+  Spectacles,
+  EyeScope,
+} from "./icons";
 
 export default function Services() {
   const services = [
     {
-      title: 'Comprehensive eye exams',
+      title: "Comprehensive eye exams",
       icon: <Refractor className="h-14 w-auto fill-current" />,
     },
     {
-      title: 'Monitoring and detecting eye conditions',
+      title: "Monitoring and detecting eye conditions",
       icon: <EyeTear className="h-14 w-auto fill-current" />,
     },
     {
-      title: 'Referrals to ophthalmologists',
-      icon: <Refractor className="h-14 w-auto fill-current" />,
+      title: "Referrals to ophthalmologists",
+      icon: <Medicine className="h-14 w-auto fill-current" />,
     },
     {
-      title: 'Ocular Therapeutics',
+      title: "Ocular Therapeutics",
       icon: <EyeTear className="h-14 w-auto fill-current" />,
     },
     {
-      title: 'Bulk Billing',
-      icon: <Refractor className="h-14 w-auto fill-current" />,
+      title: "Bulk Billing",
+      icon: <Clipboard className="h-14 w-auto fill-current" />,
     },
     {
-      title: 'Contact lens fitting',
-      icon: <EyeTear className="h-14 w-auto fill-current" />,
+      title: "Contact lens fitting",
+      icon: <ContactLensFitting className="h-14 w-auto fill-current" />,
     },
     {
-      title: 'ServiUnique, quality framesce',
-      icon: <Refractor className="h-14 w-auto fill-current" />,
+      title: "Unique, quality frames",
+      icon: <Glasses className="h-14 w-auto fill-current" />,
     },
     {
-      title: 'ServicEvery day and specialist sunglassese',
-      icon: <EyeTear className="h-14 w-auto fill-current" />,
+      title: "Every day and specialist sunglasses",
+      icon: <Spectacles className="h-14 w-auto fill-current" />,
     },
     {
-      title: 'SerFree frame styling consultsvice',
-      icon: <Refractor className="h-14 w-auto fill-current" />,
+      title: "Free frame styling consults",
+      icon: <EyeScope className="h-14 w-auto fill-current" />,
     },
-  ]
+  ];
 
   return (
-    <div className="overflow-hidden bg-[#FDF2E9] py-2 lg:py-16 lg:px-36">
+    <div
+      id="services"
+      className="overflow-hidden bg-[#FDF2E9] py-2 lg:py-16 lg:px-36"
+    >
       <div className="no-scrollbar smgrid-cols-2 my-8 flex snap-x snap-proximity grid-cols-1 gap-8 overflow-x-auto sm:grid md:grid-cols-3 ">
         {services.map(({ title, icon }) => (
           <div
@@ -58,5 +70,5 @@ export default function Services() {
         ))}
       </div>
     </div>
-  )
+  );
 }

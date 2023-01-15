@@ -1,8 +1,8 @@
-'use client'
-import 'keen-slider/keen-slider.min.css'
+"use client";
+import "keen-slider/keen-slider.min.css";
 
-import { useKeenSlider } from 'keen-slider/react'
-import Image from 'next/image'
+import { useKeenSlider } from "keen-slider/react";
+import Image from "next/image";
 
 export default function ImageSlider({ images }: any) {
   const [sliderRef] = useKeenSlider<HTMLDivElement>(
@@ -11,35 +11,35 @@ export default function ImageSlider({ images }: any) {
     },
     [
       (slider) => {
-        let timeout: ReturnType<typeof setTimeout>
-        let mouseOver = false
+        let timeout: ReturnType<typeof setTimeout>;
+        let mouseOver = false;
         function clearNextTimeout() {
-          clearTimeout(timeout)
+          clearTimeout(timeout);
         }
         function nextTimeout() {
-          clearTimeout(timeout)
-          if (mouseOver) return
+          clearTimeout(timeout);
+          if (mouseOver) return;
           timeout = setTimeout(() => {
-            slider.next()
-          }, 3500)
+            slider.next();
+          }, 3500);
         }
-        slider.on('created', () => {
-          slider.container.addEventListener('mouseover', () => {
-            mouseOver = true
-            clearNextTimeout()
-          })
-          slider.container.addEventListener('mouseout', () => {
-            mouseOver = false
-            nextTimeout()
-          })
-          nextTimeout()
-        })
-        slider.on('dragStarted', clearNextTimeout)
-        slider.on('animationEnded', nextTimeout)
-        slider.on('updated', nextTimeout)
+        slider.on("created", () => {
+          slider.container.addEventListener("mouseover", () => {
+            mouseOver = true;
+            clearNextTimeout();
+          });
+          slider.container.addEventListener("mouseout", () => {
+            mouseOver = false;
+            nextTimeout();
+          });
+          nextTimeout();
+        });
+        slider.on("dragStarted", clearNextTimeout);
+        slider.on("animationEnded", nextTimeout);
+        slider.on("updated", nextTimeout);
       },
     ]
-  )
+  );
 
   return (
     <>
@@ -59,5 +59,5 @@ export default function ImageSlider({ images }: any) {
         </div>
       </div>
     </>
-  )
+  );
 }

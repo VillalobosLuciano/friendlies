@@ -63,7 +63,7 @@ const teamMember: TeamMember[] = [
 
 export default function AboutUs() {
   return (
-    <section className="my-10 md:my-20">
+    <section id="about" className="my-10 md:my-20">
       <h1 className="mb-10 text-center text-5xl font-medium underline decoration-[#F38425] underline-offset-8 md:mb-20 lg:text-6xl">
         About us
       </h1>

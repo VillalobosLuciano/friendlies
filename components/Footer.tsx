@@ -5,7 +5,7 @@ import PinMap from "./icons/PinMap";
 
 export default function Footer() {
   return (
-    <div className="relative bg-black">
+    <div id="contact" className="relative bg-black">
       <div className="relative mx-4 pt-8 pb-12 lg:mx-32 lg:grid lg:grid-cols-6 lg:py-16">
         <div className="mb-12 lg:col-span-3 lg:mb-0 lg:max-w-2xl lg:pr-12">
           <h2 className="text-decoration-underline mb-8 text-3xl font-medium tracking-wide text-white underline decoration-[#F38425] underline-offset-8 xl:text-4xl">
